@@ -1,27 +1,16 @@
-# Telegram AI Chatbot with Cohere
+# This file was previously named replit.md
+# It is not required for Heroku or most production deployments.
+# If you want to keep deployment notes, rename this file to README.md.
 
-A Telegram chatbot powered by Cohere's AI API for intelligent conversation responses.
+# HarleyBot Deployment Notes
 
-## Features
+- For Heroku, ensure you have a `Procfile` with:
+  web: python main.py
+- All dependencies should be listed in requirements.txt
+- Environment variables should be set in Heroku config vars
 
-- 🤖 AI-powered responses using Cohere's language models
-- 💬 Natural conversation handling
-- ⚡ Real-time message processing
-- 🛡️ Rate limiting to prevent spam
-- 📝 Comprehensive logging
-- 🔧 Easy configuration via environment variables
+# Usage
+- Run locally: `python main.py`
+- Deploy to Heroku: Push to Heroku Git and scale dynos
 
-## Prerequisites
-
-- Python 3.8+
-- Telegram Bot Token (from @BotFather)
-- Cohere API Key (from Cohere Dashboard)
-
-## Installation
-
-1. **Clone or download the project files**
-
-2. **Install required packages:**
-   ```bash
-   pip install python-telegram-bot cohere python-dotenv
-   
+# Remove or rename this file if not needed.
