@@ -1,52 +1,29 @@
-import asyncio
-import signal
-import sys
+#!/usr/bin/env python3
+"""
+Main entry point for the Telegram chatbot.
+"""
+
 import logging
-from telegram_integration import SiegeTelegramBot
+import asyncio
+from bot import TelegramChatBot
 
 # Configure logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
+
 logger = logging.getLogger(__name__)
 
-# Global bot instance
-bot_instance = None
-
 async def main():
-    """Main function to run the Siege Telegram bot"""
-    global bot_instance
-    
+    """Main function to start the bot."""
     try:
-        # Create and start Siege
-        bot_instance = SiegeTelegramBot()
-        logger.info("Siege Chat Bot initialized successfully")
-        
-        # Start the bot
-        await bot_instance.run()
-        
-    except KeyboardInterrupt:
-        logger.info("Siege terminated by user")
+        # Initialize and start the bot
+        bot = TelegramChatBot()
+        await bot.start()
     except Exception as e:
-        logger.error(f"Fatal error: {e}")
-        sys.exit(1)
+        logger.error(f"Failed to start bot: {e}")
+        raise
 
-def signal_handler(signum, frame):
-    """Handle shutdown signals gracefully"""
-    logger.info(f"Received signal {signum}, shutting down Siege...")
-    sys.exit(0)
-
-if __name__ == "__main__":
-    # Set up signal handlers for graceful shutdown
-    signal.signal(signal.SIGINT, signal_handler)
-    signal.signal(signal.SIGTERM, signal_handler)
-    
-    # Run Siege
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        logger.info("Siege stopped")
-    except Exception as e:
-        logger.error(f"Application error: {e}")
-        sys.exit(1)
+if __name__ == '__main__':
+    asyncio.run(main())
