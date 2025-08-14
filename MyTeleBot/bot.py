@@ -129,7 +129,7 @@ class SiegeBot:
                 logger.error(f"Error handling reply: {e}")
                 fallback_response = self.personality.get_error_response()
                 await update.message.reply_text(fallback_response)
-    
+                
     def is_science_history_question(self, message: str) -> bool:
         """Check if the message is asking for science or history information"""
         question_indicators = ['what is', 'who is', 'when did', 'where is', 'how did', 'why did', 'tell me about', 'explain']
