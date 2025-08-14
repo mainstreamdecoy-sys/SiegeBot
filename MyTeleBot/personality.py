@@ -2,6 +2,7 @@ import random
 import re
 import wikipedia
 import logging
+import DDGS # New import for DuckDuckGo
 
 class SiegePersonality:
     def __init__(self):
