@@ -13,7 +13,6 @@ from datetime import datetime
 import pytz
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-from personality import SiegePersonality
 from config import Config
 
 logger = logging.getLogger(__name__)
@@ -24,7 +23,6 @@ class TelegramChatBot:
     def __init__(self):
         """Initialize the bot with configuration and API clients."""
         self.config = Config()
-        self.personality = SiegePersonality()
         
         # Initialize Cohere client
         try:
