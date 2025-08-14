@@ -1,12 +1,7 @@
-import os
+
 import logging
 import asyncio
 import cohere
-import random
-import re
-import math
-from datetime import datetime
-import pytz
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from personality import SiegePersonality
