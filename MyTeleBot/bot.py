@@ -129,37 +129,6 @@ class SiegeBot:
                 logger.error(f"Error handling reply: {e}")
                 fallback_response = self.personality.get_error_response()
                 await update.message.reply_text(fallback_response)
-
-    def get_current_datetime(self):
-    from datetime import datetime
-    now = datetime.now()
-    return f"The current date is {now.strftime('%A, %B %d, %Y')} and the time is {now.strftime('%I:%M:%S %p')}."
-
-def search_business_info(self, query: str) -> str:
-    business_data = {
-        "pizzeria": {
-            "name": "Pizza Planet",
-            "phone_number": "555-123-4567",
-            "address": "123 Main St, Anytown, USA",
-        },
-        "dentist": {
-            "name": "Smiles Dental Clinic",
-            "phone_number": "555-987-6543",
-            "address": "456 Oak Ave, Anytown, USA",
-        },
-        "cafe": {
-            "name": "The Daily Grind Cafe",
-            "phone_number": "555-246-8101",
-            "address": "789 Pine Rd, Anytown, USA",
-        }
-    }
-
-    query_lower = query.lower()
-    for business_type, data in business_data.items():
-        if business_type in query_lower:
-            return f"I found some information for a {data['name']}: The phone number is {data['phone_number']} and the address is {data['address']}."
-
-    return "I'm sorry, I couldn't find any information for that business. Please try again with a different query."
     
     def is_science_history_question(self, message: str) -> bool:
         """Check if the message is asking for science or history information"""
