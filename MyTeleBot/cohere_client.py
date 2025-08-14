@@ -1,4 +1,3 @@
-
 """
 Cohere API client for generating intelligent responses
 """
