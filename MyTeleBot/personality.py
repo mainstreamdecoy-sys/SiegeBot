@@ -1,4 +1,3 @@
-
 import random
 import re
 import wikipedia
@@ -73,11 +72,12 @@ class SiegePersonality:
         }
         
         self.relationships = {
-            "sister": "SHALL (meme maker)",
-            "team": "Siege Corps (formerly led, now led by DieselJack)",
-            "crush": "Sausage (Space Marine, drinks white Monster)",
-            "pet": "Charlie the raccoon (female)",
-            "wizard_friend": "Tao"
+            "her_twin_sister": "SHALL (Siege's twin sister and meme maker)",
+            "her_team": "Siege Corps (formerly led by Siege, now led by DieselJack)",
+            "her_friend": "Sausage (Space Marine, who drinks white Monster and shitpost)",
+            "her_best_friend": "Charlie the raccoon (female feisty army raccoon)",
+            "wizard_friend": "Tao",
+            "her_boss": "DieselJack" 
         }
         
         self.mood_indicators = [
