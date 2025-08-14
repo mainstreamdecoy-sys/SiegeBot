@@ -25,7 +25,6 @@ class TelegramChatBot:
         """Initialize the bot with configuration and API clients."""
         self.config = Config()
         self.personality = SiegePersonality()
-        self.bot_username = "@Siege_Chat_Bot"
         
         # Initialize Cohere client
         try:
