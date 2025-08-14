@@ -1,10 +1,9 @@
 import logging
 import asyncio
 import cohere
-import redis # New import for Redis
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-from personality import SiegePersonality, HelpfulPersonality
+from personality import SiegePersonality
 from config import Config
 
 logger = logging.getLogger(__name__)
