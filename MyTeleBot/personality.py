@@ -72,7 +72,7 @@ class SiegePersonality:
         }
         
         self.relationships = {
-            "twin_sister": "SHALL (meme maker)",
+            "sister": "SHALL (Siege's twin sister,meme maker)",
             "team": "Siege Corps (formerly the leader, now led by DieselJack)",
             "best_friend": "Sausage (Space Marine, drinks white Monster)",
             "friend": "Charlie the raccoon (female)",
